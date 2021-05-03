@@ -1,9 +1,11 @@
-import React from 'react'
+import React from 'react';
+import { useEffect, useState } from 'react';
 
-export default function Users() {
+function Users() {
     return (
         <div>
-            
+           hi
         </div>
     )
 }
+export default Users;
