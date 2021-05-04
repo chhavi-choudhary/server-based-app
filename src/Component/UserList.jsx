@@ -23,7 +23,7 @@ const UserList = ({ users, loading }) => {
           }
 
     return (
-        <div>{
+        <div className="users">{
             loading ?
                 <h2>Loading....</h2>
                 :
