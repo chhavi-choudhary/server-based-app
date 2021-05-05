@@ -6,6 +6,7 @@ import ReactPaginate from 'react-paginate';
 const UserList = ({ users, loading }) => {
     const [pageNumber, setPageNumber] = useState(1);
     
+    
 
 
     const userPerPage = 10;
@@ -16,7 +17,7 @@ const UserList = ({ users, loading }) => {
                 <p>FirstName:{user.first_name}</p>
                 <p>LastName:{user.last_name}</p>
                 <p>Created At:{user.created_at}</p>
-                <p>Status:{user.status}</p>
+                <p className="status">{user.status}</p>
             </div>
         ));
 

@@ -1,10 +1,18 @@
-import React from 'react'
+import React from "react";
 
- const New = () => {
-    return (
-        <div>
-            hi
-        </div>
-    )
+import { useForm } from "react-hook-form";
+
+
+
+function New() {
+  const { register, handleSubmit } = useForm();
+  const onSubmit = data => console.log(data);
+   
+  return (
+    <form onSubmit={handleSubmit(onSubmit)}>
+      <input {...register("firstName")} />
+      <input type="submit" />
+    </form>
+  );
 }
 export default New;
