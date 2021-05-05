@@ -5,6 +5,8 @@ import ReactPaginate from 'react-paginate';
 
 const UserList = ({ users, loading }) => {
     const [pageNumber, setPageNumber] = useState(1);
+    
+    
 
 
     const userPerPage = 10;
@@ -15,35 +17,48 @@ const UserList = ({ users, loading }) => {
                 <p>FirstName:{user.first_name}</p>
                 <p>LastName:{user.last_name}</p>
                 <p>Created At:{user.created_at}</p>
+                <p className="status">{user.status}</p>
             </div>
         ));
-          const pageCount = Math.ceil(users.length/userPerPage);
-          const pageChange=({ selected })=>{
-              setPageNumber(selected);
-          }
+
+
+        // const userStatus = users.slice(totalVisitedPage, totalVisitedPage + userPerPage)
+        // .map(user => (
+        //     <div key={user.id} className="userlist">
+                
+        //         <p>Status:{user.status}</p>
+        //     </div>
+        // ));
+
+    const pageCount = Math.ceil(users.length / userPerPage);
+    const pageChange = ({ selected }) => {
+        setPageNumber(selected);
+    }
 
     return (
-        <div className="users">{
-            loading ?
-                <h2>Loading....</h2>
-                :
-                <div className="users">
-                    { displayUsers}
-                    <ReactPaginate 
-                    previousLabel={"Previous"}
-                    nextLabel={"Next"}
-                    pageCount={ pageCount}
-                    onPageChange={pageChange}
-                    containerClassName={"paginationButton"}
-                    previousLinkClassName={"previoiusButton"}
-                    nextLinkClassName={"nextButton"}
-                    disabledClassName={"paginationDisabled"}
-                    activeClassName={"paginationActive"}
-                    
-                    />
-                </div>
-        }
-        </div>
+       
+            <div className="users">
+                {
+                    loading ?
+                        <h2>Loading....</h2>
+                        :
+                        <div className="users">
+                         {displayUsers}
+                            <button className="status">check status</button>
+                            <ReactPaginate
+                                previousLabel={"Previous"}
+                                nextLabel={"Next"}
+                                pageCount={pageCount}
+                                onPageChange={pageChange}
+                                containerClassName={"paginationButton"}
+                                previousLinkClassName={"previoiusButton"}
+                                nextLinkClassName={"nextButton"}
+                                disabledClassName={"paginationDisabled"}
+                                activeClassName={"paginationActive"}
+                            />
+                        </div>
+                }
+         </div>
     )
 }
 export default UserList;
