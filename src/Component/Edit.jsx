@@ -1,12 +1,18 @@
 import React from 'react';
 import { useForm } from "react-hook-form";
 import './New.css';
+import EditUser from './EditUser';
+
 const Edit = () => {
   const { register, handleSubmit, watch, formState: { errors } } = useForm();
   const onSubmit = data => alert(JSON.stringify(data));
   console.log(watch("example"))
 
   return (
+  <div>
+    <EditUser/>
+  
+    
     <div className="createForm">
       <h2>Handle validation Error with message!!</h2>
       <form onSubmit={handleSubmit(onSubmit)} >
@@ -48,6 +54,7 @@ const Edit = () => {
         <input type="date"{...register("updated_at", { required: true, maxLength:10 })} />
         <input type="submit" />
       </form>
+    </div>
     </div>
   );
 }
