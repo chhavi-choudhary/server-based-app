@@ -9,6 +9,7 @@ function New() {
   
   return (
     <div className="createForm">
+      <h2>To create new user, enter details here!!</h2>
     <form onSubmit={handleSubmit(onSubmit)} >
        <input type="integer" {...register("id")}placeholder= "Id" />
       <input type="text" {...register("last_name")} placeholder= "Last Name" />

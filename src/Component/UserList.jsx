@@ -21,15 +21,6 @@ const UserList = ({ users, loading }) => {
             </div>
         ));
 
-
-        // const userStatus = users.slice(totalVisitedPage, totalVisitedPage + userPerPage)
-        // .map(user => (
-        //     <div key={user.id} className="userlist">
-                
-        //         <p>Status:{user.status}</p>
-        //     </div>
-        // ));
-
     const pageCount = Math.ceil(users.length / userPerPage);
     const pageChange = ({ selected }) => {
         setPageNumber(selected);
@@ -44,7 +35,6 @@ const UserList = ({ users, loading }) => {
                         :
                         <div className="users">
                          {displayUsers}
-                            <button className="status">check status</button>
                             <ReactPaginate
                                 previousLabel={"Previous"}
                                 nextLabel={"Next"}
