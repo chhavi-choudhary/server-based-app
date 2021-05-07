@@ -5,10 +5,13 @@ import New from './Component/New';
 import Edit from './Component/Edit';
 import Navbar from './Component/Navbar';
 import AddUser from './Component/AddUser';
+import { GlobalProvider } from "./context/GlobalState";
+import NewUserlist from './Component/NewUserlist';
 
 function App() {
   return (
     <div className="App">
+       <GlobalProvider>
      <Router>
        <Navbar/>
        <Switch>
@@ -16,8 +19,10 @@ function App() {
          <Route path='/new' component={New}/>
          <Route path='/edit' component={Edit}/>
          <Route path='/add' component={AddUser}/>
+         <Route path='/newuser' component={NewUserlist}/>
        </Switch>
      </Router>
+     </GlobalProvider>
     </div>
   );
 }
