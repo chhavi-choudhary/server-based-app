@@ -19,6 +19,17 @@ const UserList = ({ users, loading }) => {
                 <p>Created At:{user.created_at}</p>
             </div>
         ));
+        //locked user
+    //     const object=()=>{
+    //         const myObj={id: 354,
+    //             last_name: "Perry asdfd dfzxcv",
+    //             first_name: "Matthew asdf",
+    //     }
+    //     Object.freeze(myObj);
+    //     Object.preventExtensions(myObj);
+    //     Object.seal(myObj)
+
+    // };
 
     const pageCount = Math.ceil(users.length / userPerPage);
     const pageChange = ({ selected }) => {
