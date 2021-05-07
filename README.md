@@ -1,3 +1,12 @@
+->uesd bootstrap and react library, CRUD Operation,ReactJs
+->All the button are working and willnavigate to another page
+->/edit route-form validation characteristic have been defined for each input Type,If input is not as defined it will give an error message.
+For ex.-lastname, first name and status will only accept the alphabatical characters as input and the exceede length can not be accepted.
+For id-minimum 2 digits are required,less then 2, will show erroe message
+->for update it didn't work, all the code is commented(will continue working on it)
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

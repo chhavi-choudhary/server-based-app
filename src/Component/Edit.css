@@ -13,3 +13,26 @@
 h2{
     margin-top: 1cm;
 }
+@media screen and (max-width: 560px){
+    .update1{
+        padding-left: 10%;
+        padding-right: 10%;
+        margin-top: 2cm;
+        padding-top: 15px;
+        font-size:larger ;
+    }
+}
+@media screen and (max-width: 400px){
+    .update1{
+        margin-top: 2cm;
+        padding-top: 15px;
+        font-size:large ;
+    }
+}
+@media screen and (max-width: 400px){
+    .update1{
+        margin-top: 2cm;
+        padding-top: 15px;
+        font-size:x-small ;
+    }
+}

@@ -18,6 +18,7 @@ body{
     flex-direction: column;
     margin: 15px;
     padding: 15px;
+    color: black;
 }
 
 .users{
@@ -30,29 +31,74 @@ body{
 
 .paginationButton{
     width:85%;
-    height:80px;
+    height:100px;
     list-style: none;
     display: flex;
     justify-content: center;
     margin-bottom: 100px;
     margin-top: 100px;
-    
-   
-    
 }
 .paginationButton a{
     border:1px solid #28389C;
     border-radius: 5px;
-    padding: 10px;
+    padding: 7px;
     margin: 10px;
     color:#28389C;
     cursor: pointer;
+    background-color:#848fd4;
+    
 }
 .paginationButton a:hover{
-    color: ivory;
+    color:ivory;
     background-color: #28389C;
 }
 .paginationActive a{
     color: ivory;
     background-color: #28389C;
+}
+@media screen and (max-width: 670px){
+    .userlist{
+        height:3.5cm;
+        font-size:large;
+    }
+    .paginationButton{
+        width:75%;
+    }
+   
+}
+@media screen and (max-width: 560px){
+    .userlist{
+        height:3.5cm;
+        font-size:small;
+    }
+    .paginationButton{
+        width:100%;
+        padding: 2px;
+    }
+    .paginationButton a{
+        border:1px solid #28389C;
+        border-radius: 5px;
+        padding: 5px;
+        margin: 5px;
+        color:#28389C;
+        cursor: pointer;
+    }
+}
+@media screen and (max-width: 560px){
+    .userlist{
+        height:3.3cm;
+        font-size:x-small;
+    }
+    .paginationButton{
+        width:100%;
+        padding: 2px;
+    }
+    .paginationButton a{
+        border:1px solid #28389C;
+        border-radius: 5px;
+        padding: 5px;
+        margin: 5px;
+        color:#28389C;
+        cursor: pointer;
+    }
 }
