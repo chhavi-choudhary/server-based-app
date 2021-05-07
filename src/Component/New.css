@@ -1,7 +1,7 @@
 .createForm{
     margin-top: 2cm;
-    margin-left: 15%;
-    margin-right: 15%;
+    margin-left: 20%;
+    margin-right: 20%;
 }
 h2{
     margin-bottom: 1cm;
@@ -11,8 +11,8 @@ input {
     box-sizing: border-box;
     width: 100%;
     border-radius: 4px;
-    border: 1px solid blue;
-    padding: 20px;
+    border: 1px solid black;
+    padding: 15px;
     margin-bottom: 30px;
     font-size: 20px;
   }
@@ -27,7 +27,7 @@ input {
 
   input[type="submit"],
 .button {
-  background: #ec5990;
+  background:rgb(44, 43, 43);
   color: white;
   text-transform: uppercase;
   border: none;
