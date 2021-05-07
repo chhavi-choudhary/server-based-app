@@ -8,39 +8,48 @@ import { Link, useHistory } from 'react-router-dom';
 
 
 const AddUser = () => {
+    const { addUser } = useContext(GlobalContext);
     const [firstName,setFirstName]=useState('');
     const [lastName, setLastName]=useState('');
-    const { addUser } = useContext(GlobalContext);
+    const [status, setStatus]=useState('');
+   
     const history= useHistory();
     
-    const onSubmit=()=>{
+    const handleSubmit=()=>{
         //e.preventDefault();
-        const newUser1={
+        const newUser={
             id:uuid(),
             firstName,
-            lastName
+            lastName,
+            status
         }
-        addUser(newUser1);
+        addUser(newUser);
         history.push('/new');
     }
 
-    const onChange=(e)=>{
+    const handleNameChange=(e)=>{
         setFirstName(e.target.value);
     }
-    const onChange1=(e)=>{
+    const handleLastNameChange=(e)=>{
         setLastName(e.target.value);
+    }
+    const handlestatusChange=(e)=>{
+        setStatus(e.target.value);
     }
 
     return (
         <div>
-            <Form onSubmit={onSubmit}>
+            <Form onSubmit={handleSubmit}>
                 <FormGroup>
                     <Label>First Name</Label>
-                    <Input type="text"  value ={firstName} onChange={onChange}
+                    <Input type="text"  value ={firstName} onChange={handleNameChange}
                     placeholder=" First Name" required></Input>
                     <Label>Last Name</Label>
-                    <Input type="text"  value ={lastName} onChange={onChange1}
-                    placeholder="Last Name" ></Input>
+                    <Input type="text"  value ={lastName} onChange={handleLastNameChange}
+                    placeholder="Last Name" required ></Input>
+                    <Label>Status</Label>
+                    <Input type="text"  value ={status} onChange={handlestatusChange}
+                    placeholder="Last Name" required ></Input>
                 </FormGroup>
                 <Button type="submit">Submit</Button>
                 <Link to="/new" className="btn btn-danger ml-4">Cancel</Link>

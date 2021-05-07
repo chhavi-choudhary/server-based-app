@@ -10,7 +10,7 @@ const Edit = () => {
 
   return (
   <div>
-    <EditUser/> 
+    <EditUser /> 
     <div className="createForm">
       <h2>Handle validation Error with message!!</h2>
       <form onSubmit={handleSubmit(onSubmit)} >

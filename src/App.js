@@ -11,18 +11,18 @@ import NewUserlist from './Component/NewUserlist';
 function App() {
   return (
     <div className="App">
-       <GlobalProvider>
-     <Router>
-       <Navbar/>
-       <Switch>
-         <Route exact path='/' component={Users}/>
-         <Route path='/new' component={New}/>
-         <Route path='/edit' component={Edit}/>
-         <Route path='/add' component={AddUser}/>
-         <Route path='/newuser' component={NewUserlist}/>
-       </Switch>
-     </Router>
-     </GlobalProvider>
+      <GlobalProvider>
+        <Router>
+          <Navbar />
+          <Switch>
+            <Route exact path='/' component={Users} />
+            <Route path='/new' component={New} />
+            <Route path='/edit' component={Edit} />
+            <Route path='/add' component={AddUser} />
+            <Route path='/newuser' component={NewUserlist} />
+          </Switch>
+        </Router>
+      </GlobalProvider>
     </div>
   );
 }
