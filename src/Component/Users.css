@@ -18,6 +18,7 @@ body{
     flex-direction: column;
     margin: 15px;
     padding: 15px;
+    color: black;
 }
 
 .users{
@@ -55,4 +56,24 @@ body{
 .paginationActive a{
     color: ivory;
     background-color: #28389C;
+}
+@media screen and (max-width: 670px){
+    .userlist{
+        height:3.5cm;
+        font-size:large;
+    }
+    .paginationButton{
+        width:75%;
+    }
+   
+}
+@media screen and (max-width: 550px){
+    .userlist{
+        height:3.5cm;
+        font-size:small;
+    }
+    .paginationButton{
+        width:65%;
+        padding: 2px;
+    }
 }
