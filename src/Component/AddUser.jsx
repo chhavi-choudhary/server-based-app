@@ -1,4 +1,5 @@
 import React from 'react';
+import './Edit.css';
 import { v4 as uuid } from "uuid";
 import  { useState, useContext } from 'react';
 import { GlobalContext } from "../context/GlobalState";
@@ -39,20 +40,20 @@ const AddUser = () => {
 
     return (
         <div>
-            <Form onSubmit={handleSubmit}>
+            <Form className="update" onSubmit={handleSubmit}>
                 <FormGroup>
                     <Label>First Name</Label>
-                    <Input type="text"  value ={firstName} onChange={handleNameChange}
+                    <Input className="p-3 border-dark" type="text"  value ={firstName} onChange={handleNameChange}
                     placeholder=" First Name" required></Input>
                     <Label>Last Name</Label>
-                    <Input type="text"  value ={lastName} onChange={handleLastNameChange}
+                    <Input className="p-3 border-dark" type="text"  value ={lastName} onChange={handleLastNameChange}
                     placeholder="Last Name" required ></Input>
                     <Label>Status</Label>
-                    <Input type="text"  value ={status} onChange={handlestatusChange}
+                    <Input  className="p-3 border-dark" type="text"  value ={status} onChange={handlestatusChange}
                     placeholder="Last Name" required ></Input>
                 </FormGroup>
-                <Button type="submit">Submit</Button>
-                <Link to="/new" className="btn btn-danger ml-4">Cancel</Link>
+                <Button className="mt-5" type="submit">Submit</Button>
+                <Link to="/new" className="btn btn-danger mt-5">Cancel</Link>
             </Form>
         </div>
     )

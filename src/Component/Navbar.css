@@ -2,14 +2,19 @@ li {
     display: block;
     color: white;
     text-align: center;
-   
     text-decoration: none;
   }
   ul {
     list-style-type: none;
-    margin: 0;
+    margin-bottom: 1cm;
     padding: 0;
     overflow: hidden;
-    
+   color: white;
+  
   }
+  .links{
+    background-color:rgb(15, 13, 13);
+    height: 100px;
+  }
+ 
   

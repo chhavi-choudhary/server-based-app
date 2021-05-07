@@ -1,4 +1,5 @@
 import React from 'react';
+import './Edit.css';
 //import { useState, useContext, useEffect } from 'react';
 //import { GlobalContext } from "../context/GlobalState";
 import { Link, useHistory } from "react-router-dom";
@@ -41,16 +42,16 @@ const EditUser = (props) => {
     //     setSelectedUser({ ...selectedUser, [e.target.lastName]: e.target.value })
     // }
     return (
-        <div>
+        <div className="update">
             <Form /*onSubmit={handleSubmit}*/>
                 <FormGroup>
                     <Label>First Name</Label>
-                    <Input type="text" /*value={selectedUser.firstName} onChange={handleNameChange}*/ placeholder="First Name"></Input>
+                    <Input className="p-3 border-dark" type="text" /*value={selectedUser.firstName} onChange={handleNameChange}*/ placeholder="First Name"></Input>
                     <Label>Last Name</Label>
-                    <Input type="text" /*value={selectedUser.lastName} onChange={handleLastNameChange} */placeholder="Last Name" ></Input>
+                    <Input className="p-3 border-dark" type="text" /*value={selectedUser.lastName} onChange={handleLastNameChange} */placeholder="Last Name" ></Input>
                 </FormGroup>
-                <Button type="submit">Edit Name</Button>
-                <Link to="/new" className="btn btn-danger ml-4">Cancel</Link>
+                <Button className="mt-5" type="submit">Edit User</Button>
+                <Link to="/new" className="btn btn-danger mt-5">Cancel</Link>
             </Form>
         </div>
     )

@@ -11,8 +11,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 const Header = () => {
   return (
-    <Navbar color="dark" dark>
-      <Container>
+    <Navbar color="dark"className="h-75 p-3" >
+      <Container class="d-flex justify-content-between">
         <NavbarBrand href="/">UserList</NavbarBrand>
         <Nav>
           <NavItem>

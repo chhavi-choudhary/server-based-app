@@ -17,7 +17,6 @@ const UserList = ({ users, loading }) => {
                 <p>FirstName:{user.first_name}</p>
                 <p>LastName:{user.last_name}</p>
                 <p>Created At:{user.created_at}</p>
-                <p className="status">{user.status}</p>
             </div>
         ));
 
